@@ -14,6 +14,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "\"user\"")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,5 +33,5 @@ public class User {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> address = new ArrayList<>();
-    private String status;
+//    private String status;
 }
